@@ -16,3 +16,7 @@ Se non dovesse funzionare assicurati di essere nella cartella interna del proget
 ```
 cd "nome-della-cartella-interna-progetto"
 ```
+Una volta finito questo ho installato tailwind con:
+```
+npm install -D tailwindcss postcss autoprefixer
+```
