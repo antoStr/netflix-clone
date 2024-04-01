@@ -3,8 +3,8 @@ Questa e' una copia fullstack del sito "Netflix" creato con ( .. ) TODO specific
 
 # Utility
 ## Creazione repo ed enviroment.
-
-Ho scaricato NodeJS da [https://nodejs.org/en]([https://git-scm.com/download/win](https://nodejs.org/en)) e dopo per la creazione del progetto ho eseguito il comando nel terminale (Clonato una repo nuova da GitHub per completezza):
+### NextJS
+Ho scaricato NodeJS da [https://nodejs.org/en]((https://nodejs.org/en)) e dopo per la creazione del progetto ho eseguito il comando nel terminale (Clonato una repo nuova da GitHub per completezza):
 ```
 npx create-next-app@latest
 ```
@@ -16,7 +16,40 @@ Se non dovesse funzionare assicurati di essere nella cartella interna del proget
 ```
 cd "nome-della-cartella-interna-progetto"
 ```
+### Tailwind
 Una volta finito questo ho installato tailwind con:
 ```
 npm install -D tailwindcss postcss autoprefixer
+```
+### Prisma
+
+Ho installato l'estensione per VSCode chiamata 'Prisma'.
+Dopo ho aperto il terminale ed ho installato lo schema con questo comando:
+```
+npm install -D prisma
+```
+E successivamente crea lo schema con:
+```
+npx prisma init
+```
+Ho cambiato il provider da "postgradesql" a "mongodb" nel schema.prisma appena creato.
+Infine ho terminato l'installazione con l'integrazione con il database:
+```
+npm install @prisma/client
+```
+Una volta che ho creato il mio database con i files ed il necessario, per pusharlo su MongoDB uso:
+```
+npx prisma db push
+```
+E dovrei riuscire a visualizzare le mie collections nella tab apposita.
+
+Se per caso dovebbe dare un errore del tipo "Environment variable not found: DATABASE_URL" potrebbe essere un errore legato al fatto che non riesce a trovare il file .env. Semplicemente sposta il file all'interno del progetto o della cartella dove c'e' la roba di prisma.
+Se per caso dovresti avere un errore del tipo "Error: P1013" significa che nel link di collegamento non ha una cartella e gliela devi mettere tu con un semplice "/".
+Esempio:
+```
+DATABASE_URL="mongodb+srv://<username>:<password>@cluster0.nnbtwc3.mongodb.net"
+
+    ==>
+
+DATABASE_URL="mongodb+srv://<username>:<password>@cluster0.nnbtwc3.mongodb.net/test"
 ```
