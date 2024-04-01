@@ -1,6 +1,11 @@
 {
   "devDependencies": {
+    "@types/bcrypt": "^5.0.2",
     "cross-env": "^7.0.3",
     "prisma": "^5.11.0"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "next-auth": "^4.24.7"
   }
 }
