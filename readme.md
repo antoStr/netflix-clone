@@ -44,6 +44,7 @@ npx prisma db push
 E dovrei riuscire a visualizzare le mie collections nella tab apposita.
 
 Se per caso dovebbe dare un errore del tipo "Environment variable not found: DATABASE_URL" potrebbe essere un errore legato al fatto che non riesce a trovare il file .env. Semplicemente sposta il file all'interno del progetto o della cartella dove c'e' la roba di prisma.
+
 Se per caso dovresti avere un errore del tipo "Error: P1013" significa che nel link di collegamento non ha una cartella e gliela devi mettere tu con un semplice "/".
 Esempio:
 ```
